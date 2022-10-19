@@ -16,6 +16,5 @@ class Comment(models.Model):
         def __str__(self):
             return self.content
 
-class CommentDetailSerializer(CommentSerialiser):
-    post = serializers.ReadOnlyField(source='post.id')
-    
+
+
