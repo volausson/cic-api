@@ -3,7 +3,7 @@ from .models import Comment
 
 
 class CommentSerializer():
-    owner = seralizers.ReadOnlyField(source='owner.username')
+    owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.img.url')
@@ -20,5 +20,5 @@ class CommentSerializer():
         ]
 
 
-class CommentDetailSerializer(CommentSerialiser):
+class CommentDetailSerializer(CommentSerializer):
     post = serializers.ReadOnlyField(source='post.id')
