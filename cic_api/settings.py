@@ -65,7 +65,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True    # 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
-    'localhost', 'cic_api.herokuapp.com'
+   'cic-api.herokuapp.com', 'localhost'
 ]
 
 
